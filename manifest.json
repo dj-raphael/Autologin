@@ -1,0 +1,32 @@
+﻿{
+   "manifest_version": 2,
+   "name": "__MSG_app_name__",
+   "description": "__MSG_app_description__",
+   "version": "1.0",
+   "default_locale": "en",
+
+   "background": {
+      "scripts": [ "js/gibberish-aes-1.0.0.min.js", "js/localstoragedb.js", "js/jquery.min.js", "common.js", "providers.js", "background.js" ]
+   },
+   "page_action": {
+        "default_icon": {
+            "19": "images/keys.png",
+            "38": "images/keys.png" 
+        },
+        "default_title": "Autologin",
+        "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "content_script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "icons": {
+      "128": "images/keys.png",
+      "16": "images/keys.png",
+      "48": "images/keys.png"
+   },
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "storage" ],
+   "web_accessible_resources" : ["images/keys.png"], 
+   "options_page": "options.html"
+}

@@ -1,0 +1,141 @@
+﻿{
+   "app_name": {
+      "description": "Application name.",
+      "message": "Autologin"
+   },
+   "app_description": {
+      "description": "Application Description",
+      "message": "Automatic login to selected sites."
+   },
+   "title_option": {
+      "description": "Automatic login to selected sites.",
+      "message": "Autologin"
+   },
+
+   "options": {
+      "description": "Options title for tab",
+      "message": "Options"
+   },
+   "is_auto_login": {
+      "description": "label for checkbox Automatic login",
+      "message": "Automatic login on page if have only single account"
+   },
+   "for_multiple_account_use": {
+      "description": "discriptions before rado For multiple account use",
+      "message": "For multiple account use:"
+   },
+   "radio_modal_dialog": {
+      "description": "multiple radio option Modal dialog choose",
+      "message": "Modal dialog choose"
+   },
+   "radio_popup_window": {
+      "description": "multiple radio option Popup window",
+      "message": "Popup window"
+   },
+   "radio_informer": {
+      "description": "multiple radio option Informer",
+      "message": "informer"
+   },
+   "set_password": {
+      "description": "Label for button",
+      "message": "Set password"
+   },
+   "change_password": {
+      "description": "Label for button",
+      "message": "Change password"
+   },
+   "invalid_password": {
+      "description": "invalid password validation message",
+      "message": "Invalid password!"
+   },
+   "password_required": {
+      "description": "Required password validation message",
+      "message": "Input password!"
+   },
+   "password_not_match": {
+      "description": "Password not match validation message",
+      "message": "Password not match!"
+   },
+   "set_password1_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Set password for security level 1"
+   },
+   "set_password2_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Set password for security level 2"
+   },
+   "change_password1_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Change password for security level 1"
+   },
+   "change_password2_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Change password for security level 2"
+   },
+   "security_level": {
+      "description": "label for security level",
+      "message": "Security level"
+   },
+   "accounts": {
+      "description": "tab title Accounts",
+      "message": "Accounts"
+   },
+   "encrypted": {
+      "description": "placeholder 'encrypted' for password field",
+      "message": "encrypted"
+   },
+
+   "providers": {
+      "description": "Providers tab title",
+      "message": "Providers"
+   },
+   "account_saved": {
+      "description": "Succes saved message",
+      "message": "Account saved."
+   },
+   "request_password1_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Enter password for 1-st level secutity"
+   },
+   "request_password2_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Enter password for 2-nd level secutity"
+   },
+
+   "backup": {
+      "description": "Backup tab title",
+      "message": "Backup"
+   },
+   "about": {
+      "description": "About tab title",
+      "message": "About"
+   },
+   "about_text": {
+      "description": "Text for about extension",
+      "message": "author:  Alexey Dzkesenov<br/>date: 2013-08-27<br/>version 1.0"
+   },
+   "cancel": {
+      "description": "Cancel",
+      "message": "Cancel"
+   },
+   "set": {
+      "description": "Set",
+      "message": "Set"
+   },
+   "search": { 
+      "description": "Placeholder for search input",
+      "message": "Search"
+   },
+   "add_account": { 
+      "description": "label for add account button",
+      "message": "Add Account"
+   },
+   "confirm_cancel_enhanced_security" : { 
+      "description": "Confirmation question for cancel enhanced security",
+      "message": "Are you shure to cancel enhanced security? when cancel it - you lost all accounts with security level 1 and 2."
+   },
+   "enhanced_security_help" : {
+      "description": "Help information about enhanced security levels",
+      "message": "<h4>Enhanced Security provides additional encryption of passwords</h4> <b>Security level 0</b> provides no security passwords. accounts can not view the data in plain text , but the specialist will be able to decrypt them without problems. passwords are stored encrypted in the database , the encryption key is also stored in the database.<br/><b>Security Level 1</b> provides password security under certain conditions : does not leave open after entering the encryption key. The encryption key is requested once and stored in the memory of the browser.<br/><b>Security Level 2</b> provides the maximum possible security passwords. The encryption key is always sought , is not stored only used to decrypt the account and subsequent authorization ."
+   }
+}

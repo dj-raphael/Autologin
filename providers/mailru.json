@@ -1,0 +1,84 @@
+﻿{
+    "name" : "Mail.Ru",
+    "version" : 20131009,
+    "elements" :
+    [
+        {
+            "name": "login",
+            "type": "text",
+            "description": "Username"
+        },
+        {
+            "name": "domain",
+            "type": "select",
+            "values": ["mail.ru", "list.ru", "inbox.ru", "bk.ru"],
+            "description": "Domain"
+        },
+        {
+            "name": "password",
+            "type": "password",
+            "description": "Password"
+        }
+    ],
+    "forms" :
+    [
+        {
+            "checkVisible": true,
+            "hosts": ["mail.ru"],
+            "urls": ["/"],
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "#mailbox__login"
+                },
+                {
+                    "name": "domain",
+                    "query": "#mailbox__login__domain"
+                },
+                {
+                    "name": "password",
+                    "query": "#mailbox__password"
+                }
+            ],
+            "submit": "#mailbox__auth__button"
+        },
+        {
+            "hosts": ["e.mail.ru"],
+            "urls": ["/login.*"],
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "input[name=Login]"
+                },
+                {
+                    "name": "domain",
+                    "query": "select[name=Domain]"
+                },
+                {
+                    "name": "password",
+                    "query": "input[name=Password]"
+                }
+            ],
+            "submit": "#EnterBtn"
+        },
+        {
+            "hosts": ["my.mail.ru"],
+            "urls": ["/cgi-bin/login"],
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "input[name=Login]"
+                },
+                {
+                    "name": "domain",
+                    "query": "select[name=Domain]"
+                },
+                {
+                    "name": "password",
+                    "query": "input[name=Password]"
+                }
+            ],
+            "submit": "#EnterBtn"
+        }
+    ]
+}

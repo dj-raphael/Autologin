@@ -1,0 +1,34 @@
+﻿{
+  "name" : "Google",
+  "version" : 20131009,
+  "elements" : [
+    {
+      "name" : "login",
+      "type" : "text",
+      "description" : "Email"
+    },
+    {
+      "name" : "password",
+      "type" : "password",
+      "description" : "Password"
+    }
+    ],
+  "forms" : [
+    {
+      "checkVisible": false,
+      "hosts" : ["accounts.google.com"],
+      "urls": [".*"],
+      "elements": [
+        {
+          "name" : "login",
+          "query" : "#Email"
+        },
+        {
+          "name" : "password",
+          "query" : "#Passwd"
+        }
+      ],
+      "submit" : "#signIn"
+    }
+  ]
+}

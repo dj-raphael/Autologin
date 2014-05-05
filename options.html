@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto login Options</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/options.css">
+    <script src="js/gibberish-aes-1.0.0.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/localstoragedb.js"></script>
+    <script src="js/hide-show-password.min.js"></script>
+    <script src="common.js"></script>
+    <script src="providers.js"></script>
+    <script src="options.js"></script>
+</head>
+
+
+<body>
+    <img src="images/keys.png" style="float: left; margin: 20px 10px" />
+    <h1 i18n-message="app_name">Auto login</h1>
+    <div id="container">
+        <div id="tabs">
+            <ul>
+                <li><a href="#optionsTab" i18n-message="options">Options</a></li>
+                <li><a href="#accountsTab" i18n-message="accounts">Accounts</a></li>
+                <li><a href="#onlineTab" i18n-message="providers">Search online</a></li>
+                <li><a href="#backupTab" i18n-message="backup">Backup</a></li>
+                <li><a href="#aboutTab" i18n-message="about">About</a></li>
+            </ul>
+            <div id="optionsTab">
+                <table>
+                    <tr>
+                        <td width="20">
+                            <input id="is_auto_login" type="checkbox" />
+                        </td>
+                        <td colspan="2">
+                            <label for="is_auto_login" i18n-message="is_auto_login">Automatic login on page if have only single account</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><span i18n-message="for_multiple_account_use">For multiple account use:</span>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input id="modal" name="multiple_action" value="modal" type="radio">
+                                    </td>
+                                    <td>
+                                        <label for="modal" i18n-message="radio_modal_dialog">Modal dialog choose</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="informer" name="multiple_action" value="informer" type="radio">
+                                    </td>
+                                    <td>
+                                        <label for="informer" i18n-message="radio_informer">Informer</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="20">
+                            <input id="enhanced_security" type="checkbox" />
+                        </td>
+                        <td colspan="2">
+                            <label for="enhanced_security">Enhanced&nbsp;security</label>
+                            <span class="circle-button" id="enhanced_security_help" i18n-message-title="enhanced_security_help">?</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <fieldset id="enhanced_security_fieldset">
+                                <table>
+                                    <tr>
+                                        <td colspan="2">
+                                            <label>Security level 0:</label>
+                                        </td>
+                                        <td>password no required
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <label>Security level 1 password:</label>
+                                        </td>
+                                        <td>
+                                            <button id="set_password1" i18n-message="set_password">Set password</button>
+                                            <button id="change_password1" i18n-message="change_password">Change password</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <label>Security level 2 password:</label>
+                                        </td>
+                                        <td>
+                                            <button id="set_password2" i18n-message="set_password">Set password</button>
+                                            <button id="change_password2" i18n-message="change_password">Change password</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                            <div id="set_password_form" style="display: none" title="Set password">
+                                <table>
+                                    <tr>
+                                        <td>Password:</td>
+                                        <td><input type="password" id="input_set_password" title=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Retype password:</td>
+                                        <td><input type="password" id="input_set_password2" title=""/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="change_password_form" style="display: none" title="Change password">
+                                <table>
+                                    <tr>
+                                        <td>Old password:</td>
+                                        <td><input type="password" id="change_password_old" title=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>New password:</td>
+                                        <td><input type="password" id="change_password_new" title="" data-field-id="change_password_new2" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Retype password:</td>
+                                        <td><input type="password" id="change_password_new2" title=""/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <hr />
+                        </td>
+                    </tr>
+                </table>
+                <br clear="all" style="clear: both" />
+            </div>
+            <div id="accountsTab">
+                <input id="searchAccounts" type="text" style="width: 350px; float: left" i18n-message-placeholder="search" placeholder="Search" />
+                <button id="addAccount" i18n-message="add_account">Add Account</button>
+                <br style="clear: both" />
+                <select id="accountsList" style="width: 350px; float: left" size="10"></select>
+                <div id="accountForm"></div>
+            </div>
+            <div id="onlineTab">
+                <input id="searchText" type="text" style="width: 350px; float: left" i18n-message-placeholder="search" placeholder="Search" />
+                <br style="clear: both" />
+                <select id="providersList" style="width: 350px; float: left" size="10"></select>
+                <div id="searchForm"></div>
+                <div id="request_password_dialog" style="display: none" title="input password">
+                    <table>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" id="request_password_input" title=""/></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="backupTab">
+                <input type="checkbox" id="isBackupEncrypt" />
+                <label for="isBackupEncrypt">Encrypt</label>
+                <button>Syncronize</button>
+                <button>Import</button>
+                <br />
+                <textarea id="backupText" readonly="readonly"></textarea>
+            </div>
+            <div id="aboutTab">
+                <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+            </div>
+            <br style="clear: both" />
+        </div>
+    </div>
+</body>
+</html>

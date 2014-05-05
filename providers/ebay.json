@@ -1,0 +1,33 @@
+﻿{
+  "name" : "eBay",
+  "version" : 20131130,
+  "elements" : [
+    {
+      "name" : "login",
+      "type" : "text",
+      "description" : "Email or Login"
+    },
+    {
+      "name" : "password",
+      "type" : "password",
+      "description" : "Password"
+    }
+    ],
+  "forms" : [
+    {
+      "hosts" : ["signin.ebay.com"],
+      "urls": [".*"],
+      "elements": [
+        {
+          "name" : "login",
+          "query" : "#userid"
+        },
+        {
+          "name" : "password",
+          "query" : "#pass"
+        }
+      ],
+      "submit" : "#sgnBt"
+    }
+  ]
+}

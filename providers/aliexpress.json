@@ -1,0 +1,51 @@
+﻿{
+  "name" : "Aliexpress",
+  "version" : 20140307,
+  "elements" : [
+    {
+      "name" : "login",
+      "type" : "text",
+      "description" : "Email or Member ID"
+    },
+    {
+      "name" : "password",
+      "type" : "password",
+      "description" : "Password"
+    }
+    ],
+  "forms" : [
+    {
+      "hosts" : ["login.aliexpress.com", "login.alibaba.com"],
+      "urls": [".*"],
+      "elements": [
+        {
+          "name" : "login",
+          "query" : "#xloginPassportId"
+        },
+        {
+          "name" : "password",
+          "query" : "#xloginPasswordId"
+        }
+      ],
+      "submit" : "#signInButton"
+    },
+    {
+      "hosts" : ["shoppingcart.aliexpress.com", "www.aliexpress.com"],
+      "urls": [".*"],
+      "activators" : ["a.product-buy-only", "#buy-now"],
+      "activatorTimeout" : "2000",
+      "elements": [
+        {
+          "name" : "login",
+          "query" : "#xloginPassportId"
+        },
+        {
+          "name" : "password",
+          "query" : "#xloginPasswordId"
+        }
+      ],
+      "submit" : "#signInButton"
+    }
+
+  ]
+}

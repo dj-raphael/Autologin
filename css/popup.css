@@ -1,0 +1,46 @@
+body {
+    font-family: Arial;
+    margin: 0 0 5px 0;
+    padding: 0;
+    min-width: 220px;
+    background: snow;
+}
+
+h3 {
+    margin: 5px 5px 1px;
+}
+
+ul {
+    margin-bottom: -15px;
+}
+#menu a {
+    border: none;
+    margin: 0;
+}
+#optionsLink {
+    margin: 25px 10px;
+}
+table {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: white;
+    display: none;
+}
+
+
+
+.ui-tooltip {
+    background: #ffc0c0;
+    border: 2px solid white;
+}
+
+.ui-tooltip {
+    padding: 2px 4px;
+    color: maroon;
+    border-radius: 4px;
+    box-shadow: 0 0 7px black;
+}

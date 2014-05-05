@@ -1,0 +1,53 @@
+﻿{
+    "name" : "Facebook",
+    "version" : 20131116,
+    "elements" :
+    [
+        {
+            "name": "login",
+            "type": "text",
+            "description": "Email"
+        },
+        {
+            "name": "password",
+            "type": "password",
+            "description": "Password"
+        }
+    ],
+    "forms" :
+    [
+        {
+            "hosts": ["www.facebook.com","facebook.com"],
+            "urls": [".*"],
+            "checkVisible": true,
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "input[name=email]"
+                },
+                {
+                    "name": "password",
+                    "query": "input[name=pass]"
+                }
+            ],
+            "submit": "#loginbutton input",
+            "error": "#login_form div.pam.login_error_box.uiBoxRed"
+        },
+        {
+            "hosts": ["developers.facebook.com"],
+            "urls": ["x/apps/(\\d*)/dashboard/", "x/apps/(\\d*)/settings/basic/"],
+            "activators" : [],
+            "activatorTimeout" : "2000",
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "input[name=email]"
+                },
+                {
+                    "name": "password",
+                    "query": "input[name=pass]"
+                }
+            ],
+        }
+    ]
+}

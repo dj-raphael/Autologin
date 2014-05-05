@@ -1,0 +1,48 @@
+﻿{
+    "name": "Qiwi",
+    "version": 20140203,
+    "elements": [
+        {
+            "name": "login",
+            "type": "text",
+            "description": "Phone"
+        },
+        {
+            "name": "password",
+            "type": "password",
+            "description": "Password"
+        }
+    ],
+    "forms": [
+        {
+            "hosts": ["visa.qiwi.com", "qiwi.com"],
+            "urls": ["^/$", "^/main.action$"],
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "#phone"
+                },
+                {
+                    "name": "password",
+                    "query": "form[role=login] input[name=password]"
+                }
+            ],
+            "submit": "form[role=login] button[type=submit]"
+        },
+        {
+            "hosts": ["visa.qiwi.com", "qiwi.com"],
+            "urls": ["/payment/.*"],
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "#phone"
+                },
+                {
+                    "name": "password",
+                    "query": ".guestProfile input[name=password]"
+                }
+            ],
+            "submit": ".guestProfile button.loginBtn"
+        }
+    ]
+}

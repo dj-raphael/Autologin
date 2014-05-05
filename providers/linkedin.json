@@ -1,0 +1,50 @@
+﻿{
+    "name" : "LinkedIn",
+    "version" : 20140225,
+    "elements" :
+    [
+        {
+            "name": "login",
+            "type": "text",
+            "description": "Email"
+        },
+        {
+            "name": "password",
+            "type": "password",
+            "description": "Password"
+        }
+    ],
+    "forms" :
+    [
+        {
+            "hosts": ["www.linkedin.com","linkedin.com"],
+            "urls": ["/uas/login.*"],
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "#session_key-login"
+                },
+                {
+                    "name": "password",
+                    "query": "#session_password-login"
+                }
+            ],
+            "submit": "#btn-primary"
+        },
+        {
+            "checkVisible": true,
+            "hosts": ["www.linkedin.com","linkedin.com"],
+            "urls": ["^/$"],
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "#session_key-login"
+                },
+                {
+                    "name": "password",
+                    "query": "#session_password-login"
+                }
+            ]
+        }
+    ]
+}

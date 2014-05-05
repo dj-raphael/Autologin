@@ -1,0 +1,141 @@
+﻿{
+   "app_name": {
+      "description": "Automatic login to selected sites.",
+      "message": "Автологин"
+   },
+   "app_description": {
+      "description": "Application Description",
+      "message": "Автоматический вход на избранные сайты."
+   },
+   "title_option": {
+      "description": "Automatic login to selected sites.",
+      "message": "Автологин"
+   },
+
+   "options": {
+      "description": "Options title for tab",
+      "message": "Настройки"
+   },
+   "is_auto_login": {
+      "description": "label for checkbox Automatic login",
+      "message": "Автоматически логинится если доступен только 1 аккаунт"
+   },
+   "for_multiple_account_use": {
+      "description": "discriptions before rado For multiple account use",
+      "message": "Для множества аккаунтов использовать:"
+   },
+   "radio_modal_dialog": {
+      "description": "multiple radio option Modal dialog choose",
+      "message": "Модальный диалог"
+   },
+   "radio_popup_window": {
+      "description": "multiple radio option Popup window",
+      "message": "Всплывающее окно"
+   },
+   "radio_informer": {
+      "description": "multiple radio option Informer",
+      "message": "Иконку информер"
+   },
+   "set_password": {
+      "description": "Label for button",
+      "message": "Установить пароль"
+   },
+   "change_password": {
+      "description": "Label for button",
+      "message": "Изменить пароль"
+   },
+   "set_password1_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Пароль для 1-го уровня шифрования"
+   },
+   "set_password2_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Пароль для 2-го уровня шифрования"
+   },
+   "change_password1_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Пароль для 1-го уровня шифрования"
+   },
+   "change_password2_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Пароль для 2-го уровня шифрования"
+   },
+   "invalid_password": {
+      "description": "invalid password validation message",
+      "message": "Неправильный пароль!"
+   },
+   "password_required": {
+      "description": "Required password validation message",
+      "message": "Введите пароль!"
+   },
+   "password_not_match": {
+      "description": "Password not match validation message",
+      "message": "Пароли не совпадают!"
+   },
+   "security_level": {
+      "description": "label for security level",
+      "message": "Уровень шифрования"
+   },
+   "accounts": {
+      "description": "tab title Accounts",
+      "message": "Аккаунты"
+   },
+   "encrypted": {
+      "description": "placeholder 'encrypted' for password field",
+      "message": "зашифровано"
+   },
+   "providers": {
+      "description": "Providers tab title",
+      "message": "Провайдеры"
+   },
+   "account_saved": {
+      "description": "Succes saved message",
+      "message": "Данные сохранены."
+   },
+   "request_password1_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Пароль для 1-го уровня шифрования"
+   },
+   "request_password2_dialog_title": {
+      "description": "Title for dialog",
+      "message": "Пароль для 2-го уровня шифрования"
+   },
+
+   "backup": {
+      "description": "Backup tab title",
+      "message": "Резервная копия"
+   },
+   "about": {
+      "description": "About tab title",
+      "message": "О дополнении"
+   },
+   "about_text": {
+      "description": "Text for about extension",
+      "message": "Автор:  Алексей Джексенов<br/>дата: 27.08.2013<br/>версия 1.0"
+   },
+   "cancel": {
+      "description": "Cancel",
+      "message": "Отмена"
+   },
+   "set": {
+      "description": "Set",
+      "message": "Установить"
+   },
+   "search": { 
+      "description": "Placeholder for search input",
+      "message": "Поиск"
+   },
+   "add_account": { 
+      "description": "label for add account button",
+      "message": "Добавить Аккаунт"
+   },
+   "confirm_cancel_enhanced_security" : { 
+      "description": "Confirmation question for cancel enhanced security",
+      "message": "Вы уверены, что хотите отключить дополнительное шифрование. Откличив его вы потеряете записанные пароли с уровнем безопасности 1 и 2."
+   },
+   "enhanced_security_help" : {
+      "description": "Help information about enhanced security levels",
+      "message": "<h4>Расширенная безопасность обеспечивает дополнительное шифрование паролей</h4> <b>Уровень безопасности 0</b> не обеспечивает безопасность паролей. данные аккаунтов нельзя посмотреть открытым текстом, но специалист сможет расшифроваь их без проблем. пароли хранятся зашифрованными в базе, ключ шифрования также хранится в базе. <br><b>Уровень безопасности 1</b> обеспечивает безопасность паролей при соблюдении определённых условий: не оставлять открытым браузер после ввода ключа шифрования. Ключ шифрования запрашивается один раз и хранится в оперативной памяти браузера. <br><b>Уровень безопасности 2</b> обеспечивает максимально возможную безопасность паролей. Ключ шифрования запрашивается всегда, нигде не хранится используется только для расшифровки аккаунта и последующей авторизации."
+   }
+
+}

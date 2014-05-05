@@ -1,0 +1,50 @@
+﻿{
+    "name" : "Вконтакте",
+    "version" : 20131009,
+    "elements":
+    [
+        {
+            "name": "login",
+            "type": "text",
+            "description": "Email"
+        },
+        {
+            "name": "password",
+            "type": "password",
+            "description": "Password"
+        }
+    ],
+    "forms":
+    [
+        {
+            "hosts": ["vk.com"],
+            "urls": ["^/$"],
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "input[name=email]"
+                },
+                {
+                    "name": "password",
+                    "query": "input[name=pass]"
+                }
+            ],
+            "submit": "#quick_login_button"
+        },
+        {
+            "hosts": ["vk.com"],
+            "urls": ["^/login.php$"],
+            "elements": [
+                {
+                    "name": "login",
+                    "query": "#email"
+                },
+                {
+                    "name": "password",
+                    "query": "#pass"
+                }
+            ],
+            "submit": "button[onclick*='quick_login']"
+        }
+    ]
+}

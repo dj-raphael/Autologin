@@ -1,0 +1,33 @@
+﻿{
+  "name" : "Одноклассники",
+  "version" : 20141025,
+  "elements" : [
+    {
+      "name" : "login",
+      "type" : "text",
+      "description" : "Email"
+    },
+    {
+      "name" : "password",
+      "type" : "password",
+      "description" : "Password"
+    }
+    ],
+  "forms" : [
+    {
+      "hosts" : ["odnoklassniki.ru", "www.odnoklassniki.ru"],
+      "urls": [".*"],
+      "elements": [
+        {
+          "name" : "login",
+          "query" : "input[name='st.email']"
+        },
+        {
+          "name" : "password",
+          "query" : "input[name='st.password']"
+        }
+      ],
+      "submit" : "input[name=button_go]"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+﻿{
+  "name" : "Microsoft",
+  "version" : 20141025,
+  "elements" : [
+    {
+      "name" : "login",
+      "type" : "text",
+      "description" : "Email"
+    },
+    {
+      "name" : "password",
+      "type" : "password",
+      "description" : "Password"
+    }
+    ],
+  "forms" : [
+    {
+      "hosts" : ["login.live.com"],
+      "urls": ["/login.srf.*"],
+      "elements": [
+        {
+          "name" : "login",
+          "query" : "input[name=login]"
+        },
+        {
+          "name" : "password",
+          "query" : "input[name=passwd]"
+        }
+      ],
+      "submit" : "input[type=submit]"
+    }
+  ]
+}

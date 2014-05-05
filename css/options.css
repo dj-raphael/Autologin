@@ -1,0 +1,155 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    background: snow;
+}
+
+#container {
+    height: -webkit-calc(100% - 100px);
+    height: calc(100% - 100px);
+}
+
+#tabs {
+    margin: auto 10px;
+    height: 100%;
+}
+
+#tabs > div {
+    margin: 10px;
+    overflow: auto;
+}
+
+#optionsTab label {
+    white-space: nowrap;
+}
+
+fieldset[disabled] {
+    background-color: lightgrey;
+}
+
+#addAccount {
+    position: relative;
+    z-index: 1;
+}
+
+#providersList, #accountsList {
+    width: 300px;
+    float: left;
+    bottom: 10px;
+    position: absolute;
+    top: 120px;
+    overflow: auto;
+}
+
+#searchForm, #accountForm {
+    width: 650px;
+    float: left;
+    bottom: 10px;
+    position: absolute;
+    top: 80px;
+    left: 380px;
+    overflow: auto;
+}
+
+#searchForm h2, #accountForm h2 {
+    text-align: center;
+}
+
+#searchForm label.left, #accountForm label.left {
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+    line-height: 42px;
+}
+
+#searchForm input, #searchForm select, #accountForm input, #accountForm select, #securityLevel {
+    display: inline-block;
+    width: 250px;
+}
+
+#searchForm button, #accountForm button {
+    display: block;
+    clear: both;
+    width: 100px;
+    margin-left: 300px;
+    float: left;
+}
+
+#backupText {
+    bottom: 10px;
+    position: absolute;
+    top: 110px;
+    left: 10px;
+    right: 10px;
+    width: -webkit-calc(100% - 30px);
+}
+
+
+.ui-tooltip, .arrow:after {
+    background: #ffc0c0;
+    border: 2px solid white;
+}
+
+.ui-tooltip {
+    padding: 10px 20px;
+    color: maroon;
+    border-radius: 10px;
+    box-shadow: 0 0 7px black;
+}
+
+.arrow {
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.arrow.left.middle {
+    left: -16px;
+    height: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.arrow:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 7px;
+    width: 25px;
+    height: 25px;
+    box-shadow: -6px 6px 5px -6px black;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    tranform: rotate(45deg);
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    padding: 0;
+}
+
+.ui-buttonset .ui-button {
+    margin-right: 0;
+}
+
+.circle-button {
+    width: 1em;
+    border: solid 2px gray;
+    border-radius: 1em;
+    height: 1em;
+    text-align: center;
+    line-height: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    display:inline-block;
+    background-image: linear-gradient(to bottom, white 0%, silver 100%);
+}

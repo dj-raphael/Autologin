@@ -1,0 +1,68 @@
+﻿[
+	{
+		"name": "Mail.ru",
+		"version" : 20131009,
+		"file": "mailru.json",
+		"keywords": "mail.ru,mailru,майл.ру,майлру"
+	},
+	{
+		"name": "Вконтакте",
+		"version" : 20131009,
+		"file": "vkontakte.json",
+		"keywords": "вконтакте,vk.com,vkontakte"
+	},
+	{
+		"name": "Facebook",
+		"version" : 20131116,
+		"file": "facebook.json",
+		"keywords": "fb.com,facebook.com"
+	},
+	{
+		"name": "Google",
+		"version" : 20131009,
+		"file": "google.json",
+		"keywords": "google,gmail"
+	},
+	{
+		"name": "Aliexpress",
+		"version" : 20140307,
+		"file": "aliexpress.json",
+		"keywords": "aliexpress,alibaba"
+	},
+	{
+		"name": "Microsoft",
+		"version" : 20141025,
+		"file": "microsoft.json",
+		"keywords": "microsoft,hotmail,msn,live,passport,msdn"
+	},
+	{
+		"name": "Одноклассники",
+		"version" : 20141025,
+		"file": "odnoklassniki.json",
+		"keywords": "Одноклассники,odnoklassniki"
+	},
+	{
+		"name": "Twitter",
+		"version" : 20131009,
+		"file": "twitter.json",
+		"keywords": "twitter"
+	},
+	{
+		"name": "LinkedIn",
+		"version" : 20140225,
+		"file": "linkedin.json",
+		"keywords": "linkedin"
+	},
+	{
+		"name": "eBay",
+		"version" : 20131130,
+		"file": "ebay.json",
+		"keywords": "ebay"
+	},
+	{
+		"name": "Qiwi",
+		"version" : 20140203,
+		"file": "qiwi.json",
+		"keywords": "qiwi,киви"
+	}
+]
