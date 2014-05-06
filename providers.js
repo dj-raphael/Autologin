@@ -1,12 +1,15 @@
 // Copyright 2013 Alexey Dzheksenov. All Rights Reserved.
-(function() {
-    var loadIndex = function(query, callback) {
+(function () {
+    var base = 'https://rawgit.com/dj-raphael/Autologin/master';
+    //var base = '';
+
+    var loadIndex = function (query, callback) {
         if (typeof(query) == "function") {
             callback = query;
             query = null;
         }
         $.ajax({
-            url: '/providers/index.json',
+            url: base + '/providers/index.json',
             dataType: "json",
             success: callback
         });
@@ -14,7 +17,7 @@
 
     var loadProvider = function(url, onSuccess, onError) {
         $.ajax({
-            url: '/providers/' + url,
+            url: base + '/providers/' + url,
             dataType: "json",
             success: onSuccess,
             error: onError
