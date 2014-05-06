@@ -8,6 +8,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/localstoragedb.js"></script>
+    <script src="js/filesaver.js"></script>
     <script src="js/hide-show-password.min.js"></script>
     <script src="common.js"></script>
     <script src="providers.js"></script>
@@ -167,7 +168,8 @@
                 <input type="checkbox" id="isBackupEncrypt" />
                 <label for="isBackupEncrypt">Encrypt</label>
                 <button>Syncronize</button>
-                <button>Import</button>
+                <button id="backup_export">export</button>
+                | Import: <input type="file" id="backup_import"/>
                 <br />
                 <textarea id="backupText" readonly="readonly"></textarea>
             </div>

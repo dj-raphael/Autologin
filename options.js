@@ -124,7 +124,7 @@
         $("#set_password2").click(function () { showSetDialog(2); });
         $("#change_password1").click(function () { showChangeDialog(1); });
         $("#change_password2").click(function () { showChangeDialog(2); });
-
+        
         tooltipOptions.content = chrome.i18n.getMessage("invalid_password");
         $('#change_password_old').tooltip(tooltipOptions).showHidePassword({ size: 22 });
         tooltipOptions.content = chrome.i18n.getMessage("password_required");
@@ -143,6 +143,9 @@
             content: '<div style="font-size:70%">' +  chrome.i18n.getMessage('enhanced_security_help') + '</div>'
         }
         );
+
+        $('#backup_export').click(backupExport);
+        $('#backup_import').change(backupImport);
 
     }
 
@@ -558,6 +561,22 @@
 
     function loadBackup() {
         $('#backupText').val(localStorage.db_storage);
+    }
+
+    function backupExport() {
+        var blob = new Blob([localStorage.db_storage], { type: "text/plain;charset=utf-8" });
+        saveAs(blob, 'autologin.json');
+    }
+
+    function backupImport(evt) {
+        var files = evt.target.files;
+        var file = files[0];
+        var reader = new FileReader();
+        reader.onload = function () {
+            console.log(this.result, JSON.parse(this.result));
+            $(evt.target).replaceWith($(evt.target).clone(true));
+        }
+        reader.readAsText(file);
     }
 
 
