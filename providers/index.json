@@ -64,5 +64,11 @@
 		"version" : 20140203,
 		"file": "qiwi.json",
 		"keywords": "qiwi,киви"
+	},
+	{
+		"name": "GitHub",
+		"version" : 201400506,
+		"file": "github.json",
+		"keywords": "github"
 	}
 ]

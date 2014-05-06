@@ -1,0 +1,33 @@
+﻿{
+  "name" : "GitGub",
+  "version" : 20140506,
+  "elements" : [
+    {
+      "name" : "login",
+      "type" : "text",
+      "description" : "Username or Email"
+    },
+    {
+      "name" : "password",
+      "type" : "password",
+      "description" : "Password"
+    }
+  ],
+  "forms" : [
+    {
+      "hosts" : ["github.com"],
+      "urls": ["/login"],
+      "elements": [
+        {
+          "name" : "login",
+          "query" : "#login_field"
+        },
+        {
+          "name" : "password",
+          "query" : "#password"
+        }
+      ],
+      "submit" : "input[name='commit']"
+    }
+  ]
+}
