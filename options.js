@@ -124,7 +124,10 @@
         $("#set_password2").click(function () { showSetDialog(2); });
         $("#change_password1").click(function () { showChangeDialog(1); });
         $("#change_password2").click(function () { showChangeDialog(2); });
-        
+        dialogOptions.height = 280;
+        dialogOptions.buttons[0].text = chrome.i18n.getMessage("import");
+        $("#import_options").dialog(dialogOptions).data("validateCallback", importCallback);
+
         tooltipOptions.content = chrome.i18n.getMessage("invalid_password");
         $('#change_password_old').tooltip(tooltipOptions).showHidePassword({ size: 22 });
         tooltipOptions.content = chrome.i18n.getMessage("password_required");
@@ -573,12 +576,19 @@
         var file = files[0];
         var reader = new FileReader();
         reader.onload = function () {
-            console.log(this.result, JSON.parse(this.result));
+            $('#import_options').data('result', this.result);
             $(evt.target).replaceWith($(evt.target).clone(true));
+            $('#import_options').dialog("open");
         }
         reader.readAsText(file);
     }
 
+    function importCallback(sender) {
+        if ($('#import_all').checked()) {
+            localStorage.db_storage = $('#import_options').data('result');
+        }
+        reloadAll();
+    }
 
     function init() {
         $("#tabs").tabs({ active: 0, activate: onTabsActivate });

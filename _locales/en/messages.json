@@ -137,5 +137,39 @@
    "enhanced_security_help" : {
       "description": "Help information about enhanced security levels",
       "message": "<h4>Enhanced Security provides additional encryption of passwords</h4> <b>Security level 0</b> provides no security passwords. accounts can not view the data in plain text , but the specialist will be able to decrypt them without problems. passwords are stored encrypted in the database , the encryption key is also stored in the database.<br/><b>Security Level 1</b> provides password security under certain conditions : does not leave open after entering the encryption key. The encryption key is requested once and stored in the memory of the browser.<br/><b>Security Level 2</b> provides the maximum possible security passwords. The encryption key is always sought , is not stored only used to decrypt the account and subsequent authorization ."
+   },
+
+   "syncronize" : {
+      "description": "",
+      "message": "Syncronize"
+   },
+   "export" : {
+      "description": "",
+      "message": "Export"
+   },
+   "import" : {
+      "description": "",
+      "message": "Import"
+   },
+   "import_options_title" : {
+      "description": "",
+      "message": "Import options"
+   },
+   "import_options_text" : {
+      "description": "",
+      "message": "Choose import merge method:"
+   },
+   "import_all" : {
+      "description": "",
+      "message": "Remove all and replace"
+   },
+   "import_overwrite" : {
+      "description": "",
+      "message": "Add and Overwrite all"
+   },
+   "import_new" : {
+      "description": "",
+      "message": "Add add only new"
    }
+
 }

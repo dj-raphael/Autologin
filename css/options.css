@@ -153,3 +153,7 @@ fieldset[disabled] {
     display:inline-block;
     background-image: linear-gradient(to bottom, white 0%, silver 100%);
 }
+
+#import_options button {
+     width: 100%;
+ }
