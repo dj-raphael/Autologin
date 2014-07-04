@@ -1,7 +1,7 @@
 // Copyright 2013 Alexey Dzheksenov. All Rights Reserved.
 (function () {
-    var base = 'https://rawgit.com/dj-raphael/Autologin/master';
-    //var base = '';
+    //var base = 'https://rawgit.com/dj-raphael/Autologin/master';
+    var base = '';
 
     var loadIndex = function (query, callback) {
         if (typeof(query) == "function") {

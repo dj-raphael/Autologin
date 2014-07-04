@@ -38,11 +38,20 @@
                 return;
             }
         } else {
+            p = document.querySelector(data.form.other);
+            if (p && p.offsetHeight > 0) {
+                p.click();
+            }
             if (data.isAutoLogin) {
-                if (data.accounts.length == 1) {
-                    login(data.accounts[0], data.form);
+                if (counter > 2) {
+                    return;
                 } else {
-                    if (data.multipleAction == 'modal') chooseAccount();
+                    counter++;
+                    if (data.accounts.length == 1) {
+                        login(data.accounts[0], data.form);
+                    } else {
+                        if (data.multipleAction == 'modal') chooseAccount();
+                    }
                 }
             }
         }

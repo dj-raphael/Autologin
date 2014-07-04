@@ -1,6 +1,6 @@
 ﻿{
   "name" : "Microsoft",
-  "version" : 20141025,
+  "version" : 20141026,
   "elements" : [
     {
       "name" : "login",
@@ -20,13 +20,15 @@
       "elements": [
         {
           "name" : "login",
-          "query" : "input[name=login]"
+          "query" : "input[name=login]",
+          "predefined" : "#SUName0"
         },
         {
           "name" : "password",
           "query" : "input[name=passwd]"
         }
       ],
+	  "other" : "#idSUOther9 a",
       "submit" : "input[type=submit]"
     }
   ]
