@@ -1,0 +1,33 @@
+﻿{
+  "name" : "Elance",
+  "version" : 20140710,
+  "elements" : [
+    {
+      "name" : "login",
+      "type" : "text",
+      "description" : "Username or Email"
+    },
+    {
+      "name" : "password",
+      "type" : "password",
+      "description" : "Password"
+    }
+  ],
+  "forms" : [
+    {
+      "hosts" : ["www.elance.com"],
+      "urls": ["/php/landing/main/login.php"],
+      "elements": [
+        {
+          "name" : "login",
+          "query" : "#login_name"
+        },
+        {
+          "name" : "password",
+          "query" : "#passwd"
+        }
+      ],
+      "submit" : "#spr-sign-in-btn-standard"
+    }
+  ]
+}

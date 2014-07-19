@@ -70,5 +70,11 @@
 		"version" : 201400506,
 		"file": "github.json",
 		"keywords": "github"
+	},
+	{
+		"name": "Elance",
+		"version" : 20140710,
+		"file": "elance.json",
+		"keywords": "elance"
 	}
 ]

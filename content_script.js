@@ -30,7 +30,7 @@
         if (checkError()) return;
         var p = document.querySelector(data.form.elements[0].query);
         if (data.form.checkVisible && (!p || p.offsetHeight == 0)) {
-            if (counter > 2) {
+            if (counter > 5) {
                 return;
             } else {
                 counter++;
@@ -43,7 +43,7 @@
                 p.click();
             }
             if (data.isAutoLogin) {
-                if (counter > 2) {
+                if (counter > 15) {
                     return;
                 } else {
                     counter++;
