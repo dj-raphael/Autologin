@@ -1,6 +1,6 @@
-﻿{
+{
   "name" : "Aliexpress",
-  "version" : 20140307,
+  "version" : 20141204,
   "elements" : [
     {
       "name" : "login",
@@ -15,19 +15,19 @@
     ],
   "forms" : [
     {
-      "hosts" : ["login.aliexpress.com", "login.alibaba.com"],
+      "hosts" : ["login.aliexpress.com", "login.alibaba.com", "passport.alibaba.com"],
       "urls": [".*"],
       "elements": [
         {
           "name" : "login",
-          "query" : "#xloginPassportId"
+          "query" : "#fm-login-id"
         },
         {
           "name" : "password",
-          "query" : "#xloginPasswordId"
+          "query" : "#fm-login-password"
         }
       ],
-      "submit" : "#signInButton"
+      "submit" : "#fm-login-submit"
     },
     {
       "hosts" : ["shoppingcart.aliexpress.com", "www.aliexpress.com"],

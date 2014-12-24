@@ -1,4 +1,4 @@
-﻿[
+[
 	{
 		"name": "Mail.ru",
 		"version" : 20131009,
@@ -25,7 +25,7 @@
 	},
 	{
 		"name": "Aliexpress",
-		"version" : 20140307,
+		"version" : 20141204,
 		"file": "aliexpress.json",
 		"keywords": "aliexpress,alibaba"
 	},
@@ -61,7 +61,7 @@
 	},
 	{
 		"name": "Qiwi",
-		"version" : 20140615,
+		"version" : 20141219,
 		"file": "qiwi.json",
 		"keywords": "qiwi,киви"
 	},

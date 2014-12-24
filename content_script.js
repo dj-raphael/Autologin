@@ -43,7 +43,7 @@
                 p.click();
             }
             if (data.isAutoLogin) {
-                if (counter > 15) {
+                if (counter > 100) {
                     return;
                 } else {
                     counter++;
