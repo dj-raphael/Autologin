@@ -1,6 +1,6 @@
 {
     "name": "Qiwi",
-    "version": 20141219,
+    "version": 20150432,
     "elements": [
         {
             "name": "login",
@@ -15,8 +15,8 @@
     ],
     "forms": [
         {
-            "hosts": ["visa.qiwi.com", "qiwi.com"],
-            "urls": ["^/*"],
+            "hosts": ["qiwi.com"],
+            "urls": ["^\/.*"],
             "elements": [
                 {
                     "name": "login",
@@ -24,14 +24,16 @@
                 },
                 {
                     "name": "password",
-                    "query": "form.loginWithCaptcha input[name=password]"
+                    "query": "#header-block form input[name=password]"
                 }
             ],
-            "submit": "form.loginWithCaptcha button[value=submit]"
+            "submit": "#header-block form button[type=submit]"
         },
         {
-            "hosts": ["visa.qiwi.com", "qiwi.com"],
-            "urls": ["/payment/.*", "/report/.*"],
+            "hosts": ["visa.qiwi.com", "w.qiwi.com"],
+            "urls": ["^\/.*"],
+            "activators" : ["div.signin button.signinBtn"],
+            "activatorTimeout" : "2000",
             "elements": [
                 {
                     "name": "login",

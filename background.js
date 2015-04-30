@@ -71,7 +71,7 @@ function checkHost(url, tabId) {
             if (re.test(pageUrl)) {
                 var provider = localService.getProvider(hosts[i].providerName);
                 for (var k = 0; k < provider.forms.length; k++) {
-                    if (provider.forms[k].hosts.indexOf(host) >= 0 && provider.forms[k].urls.indexOf(re.source) >= 0) {
+                    if (provider.forms[k].hosts.indexOf(host) >= 0 && provider.forms[k].urls.indexOf(hosts[i].urls[j]) >= 0) {
                         var accounts = localService.getAccounts(provider.name);
                         var form = provider.forms[k];
                         window.setTimeout(function() {checkForm(form, tabId)});
