@@ -1,6 +1,6 @@
 {
     "name": "Qiwi",
-    "version": 20150432,
+    "version": 20150610,
     "elements": [
         {
             "name": "login",
@@ -15,7 +15,7 @@
     ],
     "forms": [
         {
-            "hosts": ["qiwi.com"],
+            "hosts": ["qiwi.com", "w.qiwi.com"],
             "urls": ["^\/.*"],
             "elements": [
                 {
@@ -24,13 +24,13 @@
                 },
                 {
                     "name": "password",
-                    "query": "#header-block form input[name=password]"
+                    "query": "header form input[name=password]"
                 }
             ],
-            "submit": "#header-block form button[type=submit]"
+            "submit": "header form button[type=submit]"
         },
         {
-            "hosts": ["visa.qiwi.com", "w.qiwi.com"],
+            "hosts": ["visa.qiwi.com"],
             "urls": ["^\/.*"],
             "activators" : ["div.signin button.signinBtn"],
             "activatorTimeout" : "2000",
